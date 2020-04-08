@@ -1,15 +1,17 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Assets/Sprites/Player.png" type="Texture" id=1]
 [ext_resource path="res://Objects/Player.gd" type="Script" id=2]
+[ext_resource path="res://Assets/Sounds/explosion_laser.wav" type="AudioStream" id=3]
+[ext_resource path="res://Assets/Sounds/explosion_ship.wav" type="AudioStream" id=4]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 4.0262
 height = 2.30599
 
 [node name="Player" type="Area2D"]
-position = Vector2( 65.3748, 194.436 )
 z_index = 100
+collision_mask = 12
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
@@ -20,3 +22,12 @@ hframes = 3
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -0.0897446, 4.42864 )
 shape = SubResource( 1 )
+
+[node name="AudioLaserHit" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+
+[node name="AudioPlayerShoot" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = -10.0
+pitch_scale = 0.5
+[connection signal="area_entered" from="." to="." method="_on_Player_area_entered"]

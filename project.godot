@@ -8,9 +8,14 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "Area2D",
+"class": "Ammo",
+"language": "GDScript",
+"path": "res://Objects/Ammo.gd"
+} ]
 _global_script_class_icons={
-
+"Ammo": ""
 }
 
 [application]
@@ -59,10 +64,11 @@ texture={
 [layer_names]
 
 2d_physics/layer_1="Player"
-2d_physics/layer_2="Ammo"
+2d_physics/layer_2="AmmoPlayer"
 2d_physics/layer_3="Mob"
+2d_physics/layer_4="AmmoMob"
 
 [rendering]
 
-environment/default_clear_color=Color( 0.141176, 0.145098, 0.313726, 1 )
+environment/default_clear_color=Color( 0.0431373, 0.0431373, 0.121569, 1 )
 environment/default_environment="res://default_env.tres"

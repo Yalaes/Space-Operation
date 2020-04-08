@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Effects/Explode.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Assets/Sprites/LaserYellowExplosion.png" type="Texture" id=2]
+
+[node name="PlayerExplode" instance=ExtResource( 1 )]
+visible = false
+texture = ExtResource( 2 )

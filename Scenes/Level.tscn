@@ -4,20 +4,19 @@
 [ext_resource path="res://Objects/Mob.tscn" type="PackedScene" id=2]
 
 [node name="Level" type="Node2D"]
+__meta__ = {
+"_edit_horizontal_guides_": [ 199.423 ],
+"_edit_vertical_guides_": [ 65.2558 ]
+}
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 65.3748, 200.79 )
 
 [node name="Mob" parent="." instance=ExtResource( 2 )]
-position = Vector2( 64.3907, 71.9169 )
+position = Vector2( 9.2879, -16.5856 )
 
 [node name="Mob2" parent="." instance=ExtResource( 2 )]
-position = Vector2( 24.6692, 70.6625 )
+position = Vector2( 57.7178, -15.9221 )
 
 [node name="Mob3" parent="." instance=ExtResource( 2 )]
-position = Vector2( 95.3317, 102.858 )
-
-[node name="Mob4" parent="." instance=ExtResource( 2 )]
-position = Vector2( 44.3209, 97.4223 )
-
-[node name="Mob5" parent="." instance=ExtResource( 2 )]
-position = Vector2( 99.931, 62.3001 )
+position = Vector2( 108.138, -15.9221 )
